@@ -5,9 +5,9 @@
   "incorrectAmount": "Le montant est incorrect !",
   "previusValue": "Valeur précédente",
   "nextValue": "Valeur suivante",
-  "validate": "validation",
+  "validate": "Validation",
   "calculatorValuesTitle": "Votre montant est composé des cartes suivantes :",
-  "cancel": "annuler",
+  "cancel": "Annuler",
   "chooseAmount": "vous pouvez choisir entre ces deux montants :",
   "noValueFound":"Aucune valeur trouvée"
 }
