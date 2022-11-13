@@ -48,6 +48,12 @@ The amount is truncated on validation, this prevents values ​​with commas.
 
 The possible cards are displayed in a mat-list-item according to the values ​​of the table **_validCards: number[] = [];_**.
 
+Added tree interceptors :
+
+- api-prefix, add http://localhost:3000/ for each query
+- jwt-handler, add authorization header -> tokenTest123
+- error-handler, api error display
+
 ## Step 2
 
 Creation of two buttons to navigate between values.
