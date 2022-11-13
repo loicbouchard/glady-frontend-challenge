@@ -44,7 +44,7 @@ The amount is truncated on validation, this prevents values ​​with commas.
 
 **_amount = Math.trunc(amount);_**
 
-**_exemple 30,1 -> 30 ; 30,9 -> 30_**
+**_example 30,1 -> 30 ; 30,9 -> 30_**
 
 The possible cards are displayed in a mat-list-item according to the values ​​of the table **_validCards: number[] = [];_**.
 
