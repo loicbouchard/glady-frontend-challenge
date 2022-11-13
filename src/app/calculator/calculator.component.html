@@ -1,0 +1,75 @@
+<mat-card class="main-card">
+  <mat-card-title translate>calculatorComponent</mat-card-title>
+  <mat-card-content>
+    <form class="calculator-form" [formGroup]="calculatorForm" novalidate>
+      <mat-form-field appearance="standard" class="full-width">
+        <mat-label translate>wishAmount</mat-label>
+        <input
+          #wishInput
+          matInput
+          type="number"
+          placeholder="AMOUNT"
+          formControlName="wishAmount"
+          (blur)="onBlur()"
+        />
+        <mat-icon
+          matSuffix
+          [color]="this.calculatorForm.invalid ? 'warn' : 'none'"
+        >
+          euro_symbol
+        </mat-icon>
+        <mat-error
+          translate
+          *ngIf="
+            calculatorForm.hasError('amountNotInteger') ||
+            calculatorForm.get('wishAmount')?.hasError('required')
+          "
+        >
+          requiredError
+        </mat-error>
+        <mat-error translate *ngIf="calculatorForm.hasError('invalidAmount')">
+          incorrectAmount
+        </mat-error>
+      </mat-form-field>
+
+      <div class="basic-flex-row-container">
+        <button
+          mat-stroked-button
+          color="accent"
+          [disabled]="calculatorForm.invalid || !(isPrevActionAllowed$ | async)"
+          (click)="prevCard()"
+          class="full-width"
+        >
+          {{ "previusValue" | translate }}
+        </button>
+        <button
+          mat-stroked-button
+          color="accent"
+          [disabled]="calculatorForm.invalid || !(isNextActionAllowed$ | async)"
+          (click)="nextCard()"
+          class="full-width"
+        >
+          {{ "nextValue" | translate }}
+        </button>
+      </div>
+
+      <button
+        mat-flat-button
+        color="primary"
+        [disabled]="calculatorForm.invalid || calculatorForm.disabled"
+        (click)="onSubmit()"
+        class="full-width"
+      >
+        {{ "Validate" | translate }}
+      </button>
+    </form>
+
+    <mat-list *ngIf="validCards" class="mt-1">
+      <div mat-subheader translate>calculatorValuesTitle</div>
+      <mat-list-item *ngFor="let card of validCards">
+        <mat-icon mat-list-icon color="primary">card_giftcard</mat-icon>
+        <div mat-line>{{ card }}</div>
+      </mat-list-item>
+    </mat-list>
+  </mat-card-content>
+</mat-card>

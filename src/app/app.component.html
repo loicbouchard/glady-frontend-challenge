@@ -1,0 +1,13 @@
+<mat-toolbar>
+  <span>{{ title }}</span>
+  <span class="spacer"></span>
+  <app-language-selector></app-language-selector>
+</mat-toolbar>
+
+<form [formGroup]="purchaseWishesForm">
+  <app-calculator
+    [shopId]="shopId"
+    (calculatorValue)="onCalculatorComponentChanged($event)"
+    formControlName="calculatorComponentValue"
+  ></app-calculator>
+</form>

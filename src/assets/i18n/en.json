@@ -1,0 +1,13 @@
+{
+  "calculatorComponent": "Calculator component",
+  "wishAmount": "Wish Amount",
+  "requiredError": "Required field, only integer fields are allowed!",
+  "incorrectAmount": "Amount is incorrect!",
+  "previusValue": "Previus value",
+  "nextValue": "Next value",
+  "validate": "validate",
+  "calculatorValuesTitle": "Your amount is made up of the following cards:",
+  "cancel": "Cancel",
+  "chooseAmount": "you can choose between these two amounts:",
+  "noValueFound":"No value found"
+}

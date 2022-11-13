@@ -1,0 +1,25 @@
+<h1 mat-dialog-title translate>noValueFound</h1>
+<div mat-dialog-content>
+  <p translate>chooseAmount</p>
+  <div class="basic-flex-row-container">
+    <button
+      mat-flat-button
+      color="primary"
+      *ngIf="combination.floor?.value as floorValue"
+      (click)="selectedValue(combination.floor)"
+    >
+      {{ floorValue }}
+    </button>
+    <button
+      mat-flat-button
+      color="accent"
+      *ngIf="combination.ceil?.value as ceilValue"
+      (click)="selectedValue(combination.ceil)"
+    >
+      {{ ceilValue }}
+    </button>
+  </div>
+</div>
+<div mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close>{{ "cancel" | translate }}</button>
+</div>

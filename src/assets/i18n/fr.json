@@ -1,0 +1,13 @@
+{
+  "calculatorComponent": "Composant de calcul",
+  "wishAmount": "Montant souhaité",
+  "requiredError": "Champ obligatoire, seuls les champs entiers sont autorisés !",
+  "incorrectAmount": "Le montant est incorrect !",
+  "previusValue": "Valeur précédente",
+  "nextValue": "Valeur suivante",
+  "validate": "validation",
+  "calculatorValuesTitle": "Votre montant est composé des cartes suivantes :",
+  "cancel": "annuler",
+  "chooseAmount": "vous pouvez choisir entre ces deux montants :",
+  "noValueFound":"Aucune valeur trouvée"
+}

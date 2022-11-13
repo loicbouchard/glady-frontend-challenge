@@ -1,0 +1,24 @@
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  background-color: #0a3d62;
+}
+
+.basic-flex-row-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.mt-1 {
+  margin-top: 1rem;
+}

@@ -1,0 +1,16 @@
+<button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Languages menu">
+  <mat-icon>language</mat-icon>
+  <span>{{ currentLang }}</span>
+</button>
+<mat-menu #menu="matMenu">
+  <button
+    mat-menu-item
+    *ngFor="let lang of langs"
+    (click)="setLanguage(lang)"
+    [ngStyle]="{
+      color: lang === currentLang ? '#ff4081' : 'black'
+    }"
+  >
+    {{ lang }}
+  </button>
+</mat-menu>
